@@ -1,3 +1,21 @@
+def count_inversions(arr):
+    inv_count = 0
+    n = len(arr)
+    
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                inv_count += 1
+                
+    return inv_count
+
+if __name__ == "__main__":
+    arr = [1, 20, 6, 4, 5]
+    result = count_inversions(arr)
+    print(f"Total inversions: {result}")
+
+    #OR
+
 def merge_and_count(arr, temp_arr, left, mid, right):
     i = left
     j = mid + 1
